@@ -125,13 +125,15 @@ function App() {
               <DinnerDiningIcon fontSize="large" />
               <RestaurantIcon fontSize="large" />
             </Divider>
-            <Typography variant="h3" gutterBottom>
-              {business['name']}
-            </Typography>
+            <Stack direction="row" spacing={2}>
+              <Typography variant="h4" gutterBottom>
+                {business['name']}
+              </Typography>
+            </Stack>
             <Stack direction="row" spacing={2} sx={{ maxHeight: '20vh', overflow: 'auto', marginBottom: 2 }}>
               <Item fontSize="1.25rem">
                 <img src={getReviewRibbon[roundRating(business['rating'])]} loading="lazy" style={{ width: '30%', marginRight: '8px' }} />
-                {business['rating']} ({business['review_count']} reviews)
+                {business['rating']} ({business['review_count']} reviews ) {business['price']}
                 <Tooltip title="View on Yelp" arrow placement="top">
                   <a href={business['url']} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-block', width: '30%' }}> {/* Set width to match parent's space */}
                     <img
