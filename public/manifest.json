@@ -2,9 +2,9 @@
   "short_name": "redfin-augmenter",
   "name": "redfin-augmenter",
   "icons": {
-    "16": "icon128.png",
-    "48": "icon128.png",
-   "128": "icon128.png"
+    "16": "icon.png",
+    "48": "icon.png",
+   "128": "icon.png"
   },
   "content_scripts": [
     {
