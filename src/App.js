@@ -82,14 +82,15 @@ function App() {
       //   'url': 'https://www.yelp.com/biz/blitz-moving-services-atlanta-2?adjust_creative=OmTYn-mRFzhWHGN2-S0kEA&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=OmTYn-mRFzhWHGN2-S0kEA'
       // },
 
-      axios.post("http://jiajianwu.pythonanywhere.com/redfin/yelp", JSON.stringify(res), {
+      axios.post("https://f56aihqxti.execute-api.us-east-1.amazonaws.com/prod/getYelp", JSON.stringify(res), {
         headers: {
           'Content-Type': 'application/json'
         }
       })
         .then((response) => {
+          const parsedData = JSON.parse(response.data.body);
           setError(null);
-          setData(response.data);
+          setData(parsedData);
           setLoading(false);
         })
         .catch(setError);
