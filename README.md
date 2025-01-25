@@ -1,3 +1,9 @@
+# Deploy a new version to Chrome
+
+After finishing code changes (increase version number in the manifest file), run `npm run build` which generates/updates the `build` folder of artifacts. Zip the build folder and upload.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
